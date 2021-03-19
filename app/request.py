@@ -15,7 +15,7 @@ def get_sources(category):
     '''
     This function gets response from the news site
     '''
-    get_sources_url = base_url.format(category,api_key)
+    get_sources_url = source_url.format(category,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
