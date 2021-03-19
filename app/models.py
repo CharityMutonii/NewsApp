@@ -1,4 +1,4 @@
-class news_source:
+class News_source:
     '''
     news_source class to define news_Source objects
     '''
