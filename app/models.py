@@ -12,4 +12,21 @@ class News_source:
         self.description = description
         self.category =category
         
+
+
+class News_article:
+    '''
+    Class for defining article objects
+    '''
+
+    def __init__(self,image,description,time,articlelink):
+        '''
+        Method for defining article variables
+        '''
+        
+        self.image = image
+        self.description = description
+        self.time = time
+        self.articlelink = articlelink
+
         
