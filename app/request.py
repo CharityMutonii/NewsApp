@@ -14,29 +14,16 @@ def get_sources(category):
 
     get_sources_url = base_url.format(category,api_key)
 
-    with urllib.request.urlopen(get_movies_url) as url:
-        
+    with urllib.request.urlopen(get_sources_url) as url:
+        get_sources_data = url.read()
+        get_sources_response = json.loads(get_sources_data)
+           
+        sources_results = None
 
+        if get_sources_response['results'] 
 
+           sources_results_list = get_sources_response['results']
+           sources_results = process_results(sources_results_list)
 
+    return sources_results        
 
-
-
-def get_movies(category):
-    '''
-    Function that gets the json responce to our url request
-    '''
-    get_movies_url = base_url.format(category,api_key)
-
-    with urllib.request.urlopen(get_movies_url) as url:
-        get_movies_data = url.read()
-        get_movies_response = json.loads(get_movies_data)
-
-        movie_results = None
-
-        if get_movies_response['results']:
-            movie_results_list = get_movies_response['results']
-            movie_results = process_results(movie_results_list)
-
-
-    return movie_results
