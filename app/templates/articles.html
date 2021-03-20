@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+{% endblock %}
+
+{% block content%}
+<div class="container-fluid">
+
+    {% for article_item in articles | batch(3)%}
+
+    <div class="row">
+        {% for article in article_item %}
+        <div class="col-md-4">
+            <div class="panel panel-default">
+
+                <a href="{{article.url}}" target="_blank">
+                    <img src="{{article.image}}" alt="{{article.title}}" class="img-responsive"
+                        styles="height: 50%;width: 50%;">
+                </a>
+                <div class="panel-body">
+                    <h4 style="font-size: 15px;"><a href="{{article.url}}"
+                            target="_blank">{{article.title |truncate(35)}}</a></h4>
+                    <p style="font-size: 15px;color: black;">{{article.description | truncate(30)}}</p>
+                    <p style="font-size: 15px;color: black;">Published at: {{article.time}}</p>
+                    <a href="{{ article.articlelink }}" class="btn btn-primary">View full article</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    {% endfor %}
+</div>
+{%endblock%}

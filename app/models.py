@@ -19,12 +19,13 @@ class News_article:
     Class for defining article objects
     '''
 
-    def __init__(self,image,description,time,articlelink):
+    def __init__(self,image,title,description,time,articlelink):
         '''
         Method for defining article variables
         '''
         
         self.image = image
+        self.title = title
         self.description = description
         self.time = time
         self.articlelink = articlelink

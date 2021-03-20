@@ -74,11 +74,12 @@ def process_articles(article_list):
     for article in article_list:
         
         image = article.get('urlToImage')
+        title = article.get('title')
         description = article.get('description')
         time = article.get('publishedAt')
         articlelink = article.get('url')
 
-        article_object = News_article(image,description,time,articlelink)
+        article_object = News_article(image,title,description,time,articlelink)
         articles_list.append(article_object)
 
     return articles_list
