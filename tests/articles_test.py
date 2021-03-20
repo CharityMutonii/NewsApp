@@ -10,7 +10,7 @@ class NewsSourceTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news_article = News_article("piclink","The article is about the  ...","3.06am","link to article")
+        self.article = News_article("image","The article is about the  ...","12.00am","article website")
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_news_article,News_article))
+        self.assertTrue(isinstance(self.article,News_article))
