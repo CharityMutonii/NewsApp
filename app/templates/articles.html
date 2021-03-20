@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% block styles%}
 {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">
+<!-- <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}"> -->
 {% endblock %}
 
 {% block content%}
@@ -11,7 +11,7 @@
 
     <div class="row">
         {% for article in article_item %}
-        <div class="col-md-4">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">  <div class="col-md-4">
             <div class="panel panel-default">
 
                 <a href="{{article.url}}" target="_blank">
