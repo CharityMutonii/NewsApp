@@ -12,7 +12,7 @@ def index():
     news_sources = get_sources()
 
 
-    title = "Welcome to news-app"
+    title = "Welcome"
     return render_template('index.html',title = title, sources = news_sources)
 
 @main.route('/articles/<articles>')
