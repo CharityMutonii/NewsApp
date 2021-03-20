@@ -1,6 +1,7 @@
+#### By **Charity Mutoni**
+
 # News App
 #### Web app shows various news-sources and shows a user articles written from the sources
-#### By **Charity Mutoni**
 ## Link to live site
    https://newsapp-charity.herokuapp.com/
 
@@ -38,4 +39,4 @@ You may contact me on  charitytoni0@gmail.com
 ### License
 This project is license  by MIT for more information visit [LICENSE.md](LICENSE.md) .
 ### copyright information
-Copyright (c) 2020 CharityMutonii
+Copyright (c) 2021 CharityMutonii
