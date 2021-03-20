@@ -7,11 +7,16 @@
 {% block content%}
 <div class="container-fluid">
 
-    {% for article_item in articles | batch(3)%}
 
-    <div class="row">
+    {% for article_item in articles | batch(3)%}
+    
+ <div class="row">
+    {% for source in sources %}
+    <h1 class="text-center">News Article for {{source.name}} </h1>
+    {% endfor %}
         {% for article in article_item %}
-        <link rel="stylesheet" href="{{url_for('static',filename='css/home.css')}}">  <div class="col-md-4">
+       
+         <div class="col-md-4">
             <div class="panel panel-default">
 
                 <a href="{{article.url}}" target="_blank">
