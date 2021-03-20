@@ -5,15 +5,13 @@
 {% endblock %}
 
 {% block content%}
-<div class="container-fluid">
+<div class="container">
 
 
     {% for article_item in articles | batch(3)%}
     
  <div class="row">
-    {% for source in sources %}
-    <h1 class="text-center">News Article for {{source.name}} </h1>
-    {% endfor %}
+    <h1 class="text-center">SOURCES Articles</h1>
         {% for article in article_item %}
        
          <div class="col-md-4">
