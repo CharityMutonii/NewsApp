@@ -7,14 +7,14 @@
 {% block content%}
 <div class="container">
 
-
+    <h1 class="text-center" style="font-size: 25px;color: black;font-weight: bolder;">Source Articles</h1>
     {% for article_item in articles | batch(3)%}
     
  <div class="row">
-    <h1 class="text-center">SOURCES Articles</h1>
+   
         {% for article in article_item %}
        
-         <div class="col-md-4">
+         <div class="col-md-3">
             <div class="panel panel-default">
 
                 <a href="{{article.url}}" target="_blank">
