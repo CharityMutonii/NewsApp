@@ -1,7 +1,7 @@
+# News App
+
 #### By **Charity Mutoni**
 
-# News App
-#### Web app shows various news-sources and shows a user articles written from the sources
 ## Link to live site
    https://newsapp-charity.herokuapp.com/
 
